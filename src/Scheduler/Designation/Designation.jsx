@@ -1,8 +1,19 @@
 import { MainContainer } from "./styles";
 
-const Designation = ({name, top, bottom, supervisor, liftStation}) => {
+const Designation = () => {
+
+    const renderLifts = () => {
+        // Map through lift designations here
+      };
+    
+      const renderNonLifts = () => {
+        // Map through non lift designations here
+      };
+
+
+
     return (
-        <MainContainer>
+        <MainContainer> 
 
         </MainContainer>
     )

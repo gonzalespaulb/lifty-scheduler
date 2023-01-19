@@ -8,6 +8,18 @@ export const MainContainer = styled.div`
   padding: 20px;
   width: 100%;
   
-  height: 600px;
   background: blue;
+`;
+
+
+export const DesignationCard = styled.div`
+
+`;
+
+export const NameContainer = styled.div`
+
+`;
+
+export const Name = styled.span`
+
 `;
