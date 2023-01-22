@@ -39,8 +39,9 @@ const Designation = () => {
       ridePassed: true,
     },
     {
-      name: "#4 BIG BURN",
+      name: "#18 VILLAGE EXPRESS",
       top: [],
+      mid: [],
       bottom: [],
       supervisor: "",
       ridePassed: true,
@@ -48,6 +49,10 @@ const Designation = () => {
   ];
 
   const nonLiftList = [
+    {
+      name: "EXTRAS",
+      workers: [],
+    },
     {
       name: "SUPERVISORS",
       workers: [],
@@ -58,10 +63,6 @@ const Designation = () => {
     },
     {
       name: "OFFICE",
-      workers: [],
-    },
-    {
-      name: "EXTRAS",
       workers: [],
     },
   ];

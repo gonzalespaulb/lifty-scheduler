@@ -5,8 +5,8 @@ export const MainContainer = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: max-content;
   align-items: start;
-  grid-gap: 20px;
-  padding: 20px;
+  grid-gap: 8px;
+  padding: 8px;
   width: 100%;
 
   @media (max-width: 650px) {
@@ -49,7 +49,7 @@ export const LiftTop = styled.div`
 `;
 
 export const SolidLine = styled.div`
-  border-top: 2px solid #000;
+  border-top: 1px solid #000;
   margin-top: 10px;
   margin-bottom: 10px;
   width: 100%;
@@ -70,7 +70,7 @@ export const EmployeeName = styled.span`
 export const EmployeeContainer = styled.div`
   display: flex;
   align-items: center;
-  // background: purple;
+  background: purple;
   width: 100%;
 
   :not(:last-child) {
@@ -98,7 +98,7 @@ line-height: 16px;
 `;
 
 export const DashedLine = styled.div`
-  border-top: 2px dashed #000;
+  border-top: 1px dashed #000;
   flex: 1;
   margin-left: 8px;
   margin-right: 8px;
