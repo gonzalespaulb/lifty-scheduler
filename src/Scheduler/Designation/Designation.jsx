@@ -1,22 +1,104 @@
-import { MainContainer } from "./styles";
+import {
+  DesignationCard,
+  DesignationEmployees,
+  LiftBottom,
+  LiftTop,
+  MainContainer,
+  Name,
+  NameContainer,
+  SolidLine,
+} from "./styles";
 
 const Designation = () => {
+  const liftList = [
+    {
+      name: "#0 CIRQUE",
+      top: [],
+      bottom: [],
+      supervisor: "",
+      ridePassed: true,
+    },
+    {
+      name: "#1 SKYCAB",
+      top: [],
+      bottom: [],
+      supervisor: "",
+      ridePassed: true,
+    },
+    {
+      name: "#3 SAM'S KNOB",
+      top: [],
+      bottom: [],
+      supervisor: "",
+      ridePassed: true,
+    },
+    {
+      name: "#4 BIG BURN",
+      top: [],
+      bottom: [],
+      supervisor: "",
+      ridePassed: true,
+    },
+  ];
 
-    const renderLifts = () => {
-        // Map through lift designations here
-      };
-    
-      const renderNonLifts = () => {
-        // Map through non lift designations here
-      };
+  const nonLiftList = [
+    {
+      name: "SUPERVISORS",
+      workers: [],
+    },
+    {
+      name: "RELIEF",
+      workers: [],
+    },
+    {
+      name: "OFFICE",
+      workers: [],
+    },
+    {
+      name: "EXTRAS",
+      workers: [],
+    },
+  ];
 
+  const renderLifts = () => {
+    // Map through lift designations here
 
+    return liftList.map((item) => {
+      return (
+        <DesignationCard>
+          <NameContainer>
+            <Name>{item.name}</Name>
+          </NameContainer>
+          <DesignationEmployees>
+            <LiftTop></LiftTop>
+            <SolidLine />
+            <LiftBottom></LiftBottom>
+          </DesignationEmployees>
+        </DesignationCard>
+      );
+    });
+  };
 
-    return (
-        <MainContainer> 
+  const renderNonLifts = () => {
+    // Map through non lift designations here
 
-        </MainContainer>
-    )
+    return nonLiftList.map((item) => {
+      return (
+        <DesignationCard>
+          <NameContainer>
+            <Name>{item.name}</Name>
+          </NameContainer>
+        </DesignationCard>
+      );
+    });
+  };
+
+  return (
+    <MainContainer>
+      {renderLifts()}
+      {renderNonLifts()}
+    </MainContainer>
+  );
 };
 
 export default Designation;
