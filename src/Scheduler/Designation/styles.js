@@ -9,6 +9,11 @@ export const MainContainer = styled.div`
   padding: 20px;
   width: 100%;
 
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+    padding: 0px;
+  }
+
   background: blue;
 `;
 
@@ -34,10 +39,10 @@ export const Name = styled.span`
 export const DesignationEmployees = styled.div`
   width: 100%;
   padding: 10px;
+  background: red;
 `;
 
 export const LiftTop = styled.div`
-  height: 200px;
   width: 100%;
 
   background: white;
@@ -51,23 +56,50 @@ export const SolidLine = styled.div`
 `;
 
 export const LiftBottom = styled.div`
-  height: 200px;
   width: 100%;
 
   background: white;
 `;
 
+export const EmployeeName = styled.span`
+  font-size: 16px;
+  line-height: 16px;
+  margin-left: 8px;
+`;
+
 export const EmployeeContainer = styled.div`
   display: flex;
   align-items: center;
+  // background: purple;
+  width: 100%;
+
+  :not(:last-child) {
+    margin-bottom: 8px;
+  }
 `;
 
-export const EmployeeStatusContainer = styled.div``;
+export const EmployeeStatusContainer = styled.div`
+  padding: 8px 16px;
+  border-radius: 20px;
 
-export const EmployeeStatus = styled.span``;
+  background: green;
+`;
 
-export const TimeIn = styled.span``;
+export const EmployeeStatus = styled.span`
+  font-size: 12px;
+  line-height: 12px;
+
+  color: white;
+`;
+
+export const TimeIn = styled.span`
+font-size: 16px;
+line-height: 16px;
+`;
 
 export const DashedLine = styled.div`
   border-top: 2px dashed #000;
+  flex: 1;
+  margin-left: 8px;
+  margin-right: 8px;
 `;

@@ -1,12 +1,18 @@
 import {
+  DashedLine,
   DesignationCard,
   DesignationEmployees,
+  EmployeeContainer,
+  EmployeeName,
+  EmployeeStatus,
+  EmployeeStatusContainer,
   LiftBottom,
   LiftTop,
   MainContainer,
   Name,
   NameContainer,
   SolidLine,
+  TimeIn,
 } from "./styles";
 
 const Designation = () => {
@@ -70,9 +76,55 @@ const Designation = () => {
             <Name>{item.name}</Name>
           </NameContainer>
           <DesignationEmployees>
-            <LiftTop></LiftTop>
+            <LiftTop>
+              <EmployeeContainer>
+                <EmployeeStatusContainer>
+                  <EmployeeStatus>FOR</EmployeeStatus>
+                </EmployeeStatusContainer>
+                <EmployeeName>Paul G.</EmployeeName>
+                <DashedLine />
+                <TimeIn>7:45</TimeIn>
+              </EmployeeContainer>
+
+              <EmployeeContainer>
+                <EmployeeStatusContainer>
+                  <EmployeeStatus>FOR</EmployeeStatus>
+                </EmployeeStatusContainer>
+                <EmployeeName>Paul G.</EmployeeName>
+                <DashedLine />
+                <TimeIn>7:45</TimeIn>
+              </EmployeeContainer>
+
+              <EmployeeContainer>
+                <EmployeeStatusContainer>
+                  <EmployeeStatus>FOR</EmployeeStatus>
+                </EmployeeStatusContainer>
+                <EmployeeName>Paul G.</EmployeeName>
+                <DashedLine />
+                <TimeIn>7:45</TimeIn>
+              </EmployeeContainer>
+            </LiftTop>
             <SolidLine />
-            <LiftBottom></LiftBottom>
+            <LiftBottom>
+
+            <EmployeeContainer>
+                <EmployeeStatusContainer>
+                  <EmployeeStatus>FOR</EmployeeStatus>
+                </EmployeeStatusContainer>
+                <EmployeeName>Paul G.</EmployeeName>
+                <DashedLine />
+                <TimeIn>7:45</TimeIn>
+              </EmployeeContainer>
+
+              <EmployeeContainer>
+                <EmployeeStatusContainer>
+                  <EmployeeStatus>FOR</EmployeeStatus>
+                </EmployeeStatusContainer>
+                <EmployeeName>Paul G.</EmployeeName>
+                <DashedLine />
+                <TimeIn>7:45</TimeIn>
+              </EmployeeContainer>
+            </LiftBottom>
           </DesignationEmployees>
         </DesignationCard>
       );
@@ -88,6 +140,25 @@ const Designation = () => {
           <NameContainer>
             <Name>{item.name}</Name>
           </NameContainer>
+          <DesignationEmployees>
+          <EmployeeContainer>
+                <EmployeeStatusContainer>
+                  <EmployeeStatus>FOR</EmployeeStatus>
+                </EmployeeStatusContainer>
+                <EmployeeName>Paul G.</EmployeeName>
+                <DashedLine />
+                <TimeIn>7:45</TimeIn>
+              </EmployeeContainer>
+
+              <EmployeeContainer>
+                <EmployeeStatusContainer>
+                  <EmployeeStatus>FOR</EmployeeStatus>
+                </EmployeeStatusContainer>
+                <EmployeeName>Paul G.</EmployeeName>
+                <DashedLine />
+                <TimeIn>7:45</TimeIn>
+              </EmployeeContainer>
+          </DesignationEmployees>
         </DesignationCard>
       );
     });
