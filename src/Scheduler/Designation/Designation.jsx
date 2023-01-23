@@ -14,118 +14,36 @@ import {
   SolidLine,
   TimeIn,
 } from "./styles";
+import { liftList, nonLiftList } from "../utils/designationList";
 
 const Designation = () => {
-  const liftList = [
-    {
-      name: "#0 CIRQUE",
-      top: [],
-      bottom: [],
-      supervisor: "",
-      ridePassed: true,
-    },
-    {
-      name: "#1 SKYCAB",
-      top: [],
-      bottom: [],
-      supervisor: "",
-      ridePassed: true,
-    },
-    {
-      name: "#3 SAM'S KNOB",
-      top: [],
-      bottom: [],
-      supervisor: "",
-      ridePassed: true,
-    },
-    {
-      name: "#18 VILLAGE EXPRESS",
-      top: [],
-      mid: [],
-      bottom: [],
-      supervisor: "",
-      ridePassed: true,
-    },
-  ];
 
-  const nonLiftList = [
-    {
-      name: "EXTRAS",
-      workers: [],
-    },
-    {
-      name: "SUPERVISORS",
-      workers: [],
-    },
-    {
-      name: "RELIEF",
-      workers: [],
-    },
-    {
-      name: "OFFICE",
-      workers: [],
-    },
-  ];
+  const renderWorkers = (workerList) => {
+    return workerList.map((worker, i) => {
+      return (
+        <EmployeeContainer key={i}>
+          <EmployeeStatusContainer>
+            <EmployeeStatus>{worker.position}</EmployeeStatus>
+          </EmployeeStatusContainer>
+          <EmployeeName>{worker.name}</EmployeeName>
+          <DashedLine />
+          <TimeIn>{worker.time}</TimeIn>
+        </EmployeeContainer>
+      );
+    });
+  };
 
   const renderLifts = () => {
-    // Map through lift designations here
-
-    return liftList.map((item) => {
+    return liftList.map((lift, i) => {
       return (
-        <DesignationCard>
+        <DesignationCard key={i}>
           <NameContainer>
-            <Name>{item.name}</Name>
+            <Name>{lift.name}</Name>
           </NameContainer>
           <DesignationEmployees>
-            <LiftTop>
-              <EmployeeContainer>
-                <EmployeeStatusContainer>
-                  <EmployeeStatus>FOR</EmployeeStatus>
-                </EmployeeStatusContainer>
-                <EmployeeName>Paul G.</EmployeeName>
-                <DashedLine />
-                <TimeIn>7:45</TimeIn>
-              </EmployeeContainer>
-
-              <EmployeeContainer>
-                <EmployeeStatusContainer>
-                  <EmployeeStatus>FOR</EmployeeStatus>
-                </EmployeeStatusContainer>
-                <EmployeeName>Paul G.</EmployeeName>
-                <DashedLine />
-                <TimeIn>7:45</TimeIn>
-              </EmployeeContainer>
-
-              <EmployeeContainer>
-                <EmployeeStatusContainer>
-                  <EmployeeStatus>FOR</EmployeeStatus>
-                </EmployeeStatusContainer>
-                <EmployeeName>Paul G.</EmployeeName>
-                <DashedLine />
-                <TimeIn>7:45</TimeIn>
-              </EmployeeContainer>
-            </LiftTop>
+            <LiftTop>{renderWorkers(lift.top)}</LiftTop>
             <SolidLine />
-            <LiftBottom>
-
-            <EmployeeContainer>
-                <EmployeeStatusContainer>
-                  <EmployeeStatus>FOR</EmployeeStatus>
-                </EmployeeStatusContainer>
-                <EmployeeName>Paul G.</EmployeeName>
-                <DashedLine />
-                <TimeIn>7:45</TimeIn>
-              </EmployeeContainer>
-
-              <EmployeeContainer>
-                <EmployeeStatusContainer>
-                  <EmployeeStatus>FOR</EmployeeStatus>
-                </EmployeeStatusContainer>
-                <EmployeeName>Paul G.</EmployeeName>
-                <DashedLine />
-                <TimeIn>7:45</TimeIn>
-              </EmployeeContainer>
-            </LiftBottom>
+            <LiftBottom>{renderWorkers(lift.bottom)}</LiftBottom>
           </DesignationEmployees>
         </DesignationCard>
       );
@@ -133,32 +51,14 @@ const Designation = () => {
   };
 
   const renderNonLifts = () => {
-    // Map through non lift designations here
-
-    return nonLiftList.map((item) => {
+    return nonLiftList.map((nonLift, i) => {
       return (
-        <DesignationCard>
+        <DesignationCard key={i}>
           <NameContainer>
-            <Name>{item.name}</Name>
+            <Name>{nonLift.name}</Name>
           </NameContainer>
           <DesignationEmployees>
-          <EmployeeContainer>
-                <EmployeeStatusContainer>
-                  <EmployeeStatus>FOR</EmployeeStatus>
-                </EmployeeStatusContainer>
-                <EmployeeName>Paul G.</EmployeeName>
-                <DashedLine />
-                <TimeIn>7:45</TimeIn>
-              </EmployeeContainer>
-
-              <EmployeeContainer>
-                <EmployeeStatusContainer>
-                  <EmployeeStatus>FOR</EmployeeStatus>
-                </EmployeeStatusContainer>
-                <EmployeeName>Paul G.</EmployeeName>
-                <DashedLine />
-                <TimeIn>7:45</TimeIn>
-              </EmployeeContainer>
+            {renderWorkers(nonLift.workers)}
           </DesignationEmployees>
         </DesignationCard>
       );

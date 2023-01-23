@@ -5,9 +5,6 @@ import { MainContainer } from "./styles";
 const Scheduler = () => {
   return (
     <MainContainer>
-      {/* Render Lift Station */}
-
-      {/* Render Other Designations */}
         <Nav></Nav>
         <Designation></Designation>
     </MainContainer>
