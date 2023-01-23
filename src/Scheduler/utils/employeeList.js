@@ -1,7 +1,7 @@
 export const allEmployees = [
     {
         name: "Kacey", 
-        id: 000, 
+        id: 0, 
     }, 
     {
         name: "Shatz", 
@@ -189,7 +189,7 @@ export const allEmployees = [
     }, 
     {
         name: "Tyler Ganci", 
-        id: 047, 
+        id: 47, 
     }, 
     {
         name: "Curtis", 
