@@ -14,16 +14,16 @@ export const MainContainer = styled.div`
     padding: 0px;
   }
 
-  background: blue;
+  // background: blue;
 `;
 
 export const DesignationCard = styled.div`
-  background: green;
+  border: 1px solid #000;
 `;
 
 export const NameContainer = styled.div`
   background: #000;
-  width: 100%;
+  width: 100%; 
   padding: 18px;
   display: flex;
   justify-content: center;
@@ -39,27 +39,33 @@ export const Name = styled.span`
 export const DesignationEmployees = styled.div`
   width: 100%;
   padding: 10px;
-  background: red;
+  // background: red;
 `;
 
 export const LiftTop = styled.div`
   width: 100%;
-
   background: white;
 `;
 
-export const SolidLine = styled.div`
-  border-top: 1px solid #000;
-  margin-top: 10px;
-  margin-bottom: 10px;
+export const LiftMid = styled.div`
   width: 100%;
+  background: white;
+
 `;
 
 export const LiftBottom = styled.div`
   width: 100%;
-
   background: white;
 `;
+
+export const SolidLine = styled.div`
+  border-top: 2px solid #000;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 100%;
+  display: ${(props) => props.renderLine ? "block" : "none"};
+`;
+
 
 export const EmployeeName = styled.span`
   font-size: 16px;
@@ -70,7 +76,7 @@ export const EmployeeName = styled.span`
 export const EmployeeContainer = styled.div`
   display: flex;
   align-items: center;
-  background: purple;
+  // background: purple;
   width: 100%;
 
   :not(:last-child) {
@@ -87,7 +93,6 @@ export const EmployeeStatusContainer = styled.div`
 
 export const EmployeeStatus = styled.span`
   font-size: 12px;
-  line-height: 12px;
 
   color: white;
 `;
@@ -102,4 +107,5 @@ export const DashedLine = styled.div`
   flex: 1;
   margin-left: 8px;
   margin-right: 8px;
+  opacity: 0.2;
 `;
