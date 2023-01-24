@@ -7,7 +7,8 @@ import {
   EmployeeStatus,
   EmployeeStatusContainer,
   LiftBottom,
-  LiftTop,
+  LiftMid,
+  LiftTop, 
   MainContainer,
   Name,
   NameContainer,
@@ -42,7 +43,9 @@ const Designation = () => {
           </NameContainer>
           <DesignationEmployees>
             <LiftTop>{renderWorkers(lift.top)}</LiftTop>
-            <SolidLine />
+            <SolidLine renderLine={true}/>
+            <LiftMid>{lift.mid && renderWorkers(lift.mid)}</LiftMid>
+            <SolidLine renderLine={lift.hasOwnProperty('mid')}/>
             <LiftBottom>{renderWorkers(lift.bottom)}</LiftBottom>
           </DesignationEmployees>
         </DesignationCard>

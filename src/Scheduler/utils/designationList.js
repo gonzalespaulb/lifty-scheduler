@@ -46,6 +46,17 @@ export const liftList = [
     supervisor: "",
     ridePassed: true,
   },
+  {
+    name: "#18 VILLAGE EXPRESS",
+    top: [whosWorking(5, operator, "7:45")],
+    mid: [whosWorking(23, operator, "7:45"), whosWorking(25, operator, "7:45")],
+    bottom: [
+      whosWorking(6, foreperson, "7:45"),
+      whosWorking(7, attendant, "7:45"),
+    ],
+    supervisor: "",
+    ridePassed: true,
+  },
 ];
 
 export const nonLiftList = [
@@ -59,10 +70,7 @@ export const nonLiftList = [
   },
   {
     name: "SUPERVISORS",
-    workers: [
-      whosWorking(31, lead, "7:15"),
-      whosWorking(32, lead, "7:15"),
-    ],
+    workers: [whosWorking(31, lead, "7:15"), whosWorking(32, lead, "7:15")],
   },
   {
     name: "RELIEF",
@@ -76,9 +84,6 @@ export const nonLiftList = [
   },
   {
     name: "OFFICE",
-    workers: [
-      whosWorking(39, admin, "6:30"),
-      whosWorking(40, admin, "6:30"),
-    ],
+    workers: [whosWorking(39, admin, "6:30"), whosWorking(40, admin, "6:30")],
   },
 ];
