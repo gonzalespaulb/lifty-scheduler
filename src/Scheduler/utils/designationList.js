@@ -26,14 +26,14 @@ export const liftList = [
       whosWorking(1, foreperson, "7:45"),
       whosWorking(2, attendant, "7:45"),
     ],
-    supervisor: "",
+    supervisor: "Jeff Thomas",
     ridePassed: true,
   },
   {
     name: "#1 SKYCAB",
     top: [whosWorking(3, operator, "7:15")],
     bottom: [whosWorking(4, foreperson, "7:45")],
-    supervisor: "",
+    supervisor: "Abby Meester",
     ridePassed: true,
   },
   {
@@ -43,7 +43,7 @@ export const liftList = [
       whosWorking(6, foreperson, "7:45"),
       whosWorking(7, attendant, "7:45"),
     ],
-    supervisor: "",
+    supervisor: "Mel Boyer",
     ridePassed: true,
   },
   {
@@ -54,7 +54,7 @@ export const liftList = [
       whosWorking(6, foreperson, "7:45"),
       whosWorking(7, attendant, "7:45"),
     ],
-    supervisor: "",
+    supervisor: "Calvin Leinenbach",
     ridePassed: true,
   },
 ];
