@@ -12,7 +12,7 @@ export const MainContainer = styled.div`
 export const Worker = styled.div`
   width: 100%;
   max-height: ${(props) =>
-    props.openInfo && props.activeInfo === props.index ? "187px" : "75px"};
+    props.openInfo && props.activeInfo === props.index ? "243px" : "75px"};
   overflow: hidden;
   transition: max-height 0.3s ease;
 
@@ -39,13 +39,15 @@ export const Name = styled.span`
 
 export const CrossIcon = styled.div`
   height: 40%;
-  transform: rotate(45deg);
+  transform: rotate(${(props) =>
+    props.openInfo && props.activeInfo === props.index ? "0deg" : "45deg"});
   aspect-ratio: 1/1;
   background-image: url(${cross});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  transition: transform 0.3s ease;
 `;
 
 export const InfoContainer = styled.div`
@@ -54,11 +56,23 @@ export const InfoContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  padding: 0 20px;
 `;
 
 export const Info = styled.span`
   font-size: 16px;
   line-height: 16px;
   margin-bottom: 16px;
-  padding: 0 20px;
+`;
+
+export const EmployeeStatusContainer = styled.div`
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  background: green;
+`;
+
+export const EmployeeStatus = styled.span`
+  font-size: 12px;
+  color: white;
 `;

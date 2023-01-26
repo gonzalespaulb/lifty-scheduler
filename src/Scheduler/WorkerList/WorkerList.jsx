@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { liftList } from "../utils/designationList";
-import { CrossIcon, Info, InfoContainer, MainContainer, Name, Worker, WorkerContainer } from "./styles";
+import { CrossIcon, EmployeeStatus, EmployeeStatusContainer, Info, InfoContainer, MainContainer, Name, Worker, WorkerContainer } from "./styles";
 
 const WorkerList = () => {
   let allWorkers = [];
@@ -76,9 +76,12 @@ const WorkerList = () => {
               <Name>
                 {worker.name}
               </Name>
-              <CrossIcon onClick={() => openAccordion(i)}/>
+              <CrossIcon onClick={() => openAccordion(i)} openInfo={openInfo} activeInfo={activeInfo} index={i}/>
           </WorkerContainer>
           <InfoContainer>
+            <EmployeeStatusContainer>
+              <EmployeeStatus>{worker.position}</EmployeeStatus>
+            </EmployeeStatusContainer>
             <Info>Supervisor: {worker.supervisor}</Info>
             <Info>Designation: {worker.designation}</Info>
             <Info>Shift Time: {worker.time}</Info>
