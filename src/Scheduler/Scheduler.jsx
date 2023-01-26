@@ -2,15 +2,19 @@ import Designation from "./Designation/Designation";
 import Nav from "./Nav/Nav";
 import { MainContainer } from "./styles";
 import WorkerList from "./WorkerList/WorkerList";
+import { Routes, Route, useLocation } from "react-router-dom";
 
 const Scheduler = () => {
+  const location = useLocation();
 
   return (
-    <MainContainer>
+      <MainContainer>
         <Nav></Nav>
-        {/* <Designation></Designation> */}
-        <WorkerList></WorkerList>
-    </MainContainer>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Designation />} />
+          <Route path="/list" element={<WorkerList />} />
+        </Routes>
+      </MainContainer>
   );
 };
 

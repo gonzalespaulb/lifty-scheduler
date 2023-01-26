@@ -36,7 +36,7 @@ export const Date = styled.span`
 export const PeopleTab = styled.div`
   height: 100%;
   aspect-ratio: 1/1;
-  background-image: url(${userInactive});
+  background-image: url(${(props) => props.location === "/" ? userInactive : userActive});
   background-size: 40%;
   background-position: center;
   background-repeat: no-repeat;
