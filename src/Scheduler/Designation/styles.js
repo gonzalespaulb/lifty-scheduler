@@ -39,7 +39,6 @@ export const Name = styled.span`
 export const DesignationEmployees = styled.div`
   width: 100%;
   padding: 10px;
-  // background: red;
 `;
 
 export const LiftTop = styled.div`
@@ -50,7 +49,6 @@ export const LiftTop = styled.div`
 export const LiftMid = styled.div`
   width: 100%;
   background: white;
-
 `;
 
 export const LiftBottom = styled.div`
@@ -76,7 +74,6 @@ export const EmployeeName = styled.span`
 export const EmployeeContainer = styled.div`
   display: flex;
   align-items: center;
-  // background: purple;
   width: 100%;
 
   :not(:last-child) {
@@ -87,13 +84,11 @@ export const EmployeeContainer = styled.div`
 export const EmployeeStatusContainer = styled.div`
   padding: 8px 16px;
   border-radius: 20px;
-
   background: green;
 `;
 
 export const EmployeeStatus = styled.span`
   font-size: 12px;
-
   color: white;
 `;
 
