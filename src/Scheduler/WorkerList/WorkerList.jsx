@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { liftList } from "../utils/designationList";
+import { CrossIcon, Info, InfoContainer, MainContainer, Name, Worker, WorkerContainer } from "./styles";
 
 const WorkerList = () => {
-  let newWorkerList = [];
+  let allWorkers = [];
 
   for (const lift of liftList) {
     if (lift.mid === undefined) {
@@ -21,7 +23,7 @@ const WorkerList = () => {
         worker.supervisor = lift.supervisor;
         worker.designation = designationPosition(worker);
 
-        newWorkerList.push(worker);
+        allWorkers.push(worker);
       }
       continue;
     }
@@ -45,15 +47,51 @@ const WorkerList = () => {
     for (const worker of liftWorkerList) {
       worker.supervisor = lift.supervisor;
       worker.designation = designationPosition(worker);
-      newWorkerList.push(worker);
+      allWorkers.push(worker);
     }
   }
 
-  const workers = newWorkerList.flat();
+  const workersToRender = allWorkers.flat();
 
-  
+  const [openInfo, setOpenInfo] = useState(false);
+  const [activeInfo, setActiveInfo] = useState(null);
 
-  return <div></div>;
+  const renderWorkers = () => {
+
+    const openAccordion = (index) => {
+      if(activeInfo === index) {
+        setActiveInfo(null);
+        setOpenInfo(false);
+      }
+      else {
+        setActiveInfo(index);
+        setOpenInfo(true);
+      }
+    }
+
+    return workersToRender.map((worker,i) => {
+      return (
+        <Worker openInfo={openInfo} activeInfo={activeInfo} index={i}>
+          <WorkerContainer>
+              <Name>
+                {worker.name}
+              </Name>
+              <CrossIcon onClick={() => openAccordion(i)}/>
+          </WorkerContainer>
+          <InfoContainer>
+            <Info>Supervisor: {worker.supervisor}</Info>
+            <Info>Designation: {worker.designation}</Info>
+            <Info>Shift Time: {worker.time}</Info>
+            <Info></Info>
+          </InfoContainer>
+        </Worker>
+      )
+    })
+  }
+
+  return <MainContainer>
+    {renderWorkers()}
+  </MainContainer>;
 };
 
 export default WorkerList;
