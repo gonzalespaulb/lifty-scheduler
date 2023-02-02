@@ -4,7 +4,7 @@ const foreperson = "FOR";
 const attendant = "ATT";
 const operator = "OPR";
 const admin = "ADM";
-const lead = "LEAD";
+const supervisor = "SUP";
 const relief = "RLF";
 
 const whosWorking = (empId, position, time) => {
@@ -25,6 +25,7 @@ export const liftList = [
     bottom: [
       whosWorking(1, foreperson, "7:45"),
       whosWorking(2, attendant, "7:45"),
+      whosWorking(28, operator, "8:00")
     ],
     supervisor: "Jeff Thomas",
     ridePassed: true,
@@ -70,7 +71,7 @@ export const nonLiftList = [
   },
   {
     name: "SUPERVISORS",
-    workers: [whosWorking(31, lead, "7:15"), whosWorking(32, lead, "7:15")],
+    workers: [whosWorking(31, supervisor, "7:15"), whosWorking(32, supervisor, "7:15")],
   },
   {
     name: "RELIEF",
