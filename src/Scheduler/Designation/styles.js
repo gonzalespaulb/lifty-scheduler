@@ -12,6 +12,7 @@ export const MainContainer = styled.div`
   @media (max-width: 650px) {
     grid-template-columns: 1fr;
     padding: 0px;
+    grid-gap: 0px;
   }
 `;
 
@@ -41,6 +42,11 @@ export const StationPosition = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
+
+  :nth-child(odd) {
+    background: #666;
+    color: #fff;
+  }
 `;
 
 export const StationInfoContainer = styled.div`
@@ -56,13 +62,13 @@ export const StationInfoContainer = styled.div`
 export const Position = styled.div`
   font-size: 12px;
   line-height: 12px;
-  color: #000;
   transform: rotate(-90deg);
 `;
 
 export const EmployeeContainer = styled.div`
   height: auto;
   flex: 1;
+  background: #fff;
 `;
 
 export const NameContainer = styled.div`
@@ -72,6 +78,7 @@ export const NameContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding-left: 24px;
+  color: #000;
   
   :not(:last-child) {
     border-bottom: 1px solid #000;
