@@ -13,94 +13,101 @@ export const MainContainer = styled.div`
     grid-template-columns: 1fr;
     padding: 0px;
   }
-
-  // background: blue;
 `;
 
 export const DesignationCard = styled.div`
   border: 1px solid #000;
 `;
 
-export const NameContainer = styled.div`
+export const DesignationNameContainer = styled.div`
+  width: 100%;
   background: #000;
-  width: 100%; 
-  padding: 18px;
+  height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-export const Name = styled.span`
-  font-size: 24px;
-  line-height: 24px;
+export const DesignationName = styled.span`
+  font-size: 18px;
+  line-height: 18px;
   color: #fff;
+  font-weight: bold;
 `;
 
-export const DesignationEmployees = styled.div`
+export const StationPosition = styled.div`
   width: 100%;
-  padding: 10px;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
 `;
 
-export const LiftTop = styled.div`
-  width: 100%;
-  background: white;
+export const StationInfoContainer = styled.div`
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-top: 1px solid #000;
+  border-right: 1px solid #000;
 `;
 
-export const LiftMid = styled.div`
-  width: 100%;
-  background: white;
-`;
-
-export const LiftBottom = styled.div`
-  width: 100%;
-  background: white;
-`;
-
-export const SolidLine = styled.div`
-  border-top: 2px solid #000;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  width: 100%;
-  display: ${(props) => props.renderLine ? "block" : "none"};
-`;
-
-
-export const EmployeeName = styled.span`
-  font-size: 16px;
-  line-height: 16px;
-  margin-left: 8px;
+export const Position = styled.div`
+  font-size: 12px;
+  line-height: 12px;
+  color: #000;
+  transform: rotate(-90deg);
 `;
 
 export const EmployeeContainer = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-
-  :not(:last-child) {
-    margin-bottom: 8px;
-  }
-`;
-
-export const EmployeeStatusContainer = styled.div`
-  padding: 8px 16px;
-  border-radius: 20px;
-  background: green;
-`;
-
-export const EmployeeStatus = styled.span`
-  font-size: 12px;
-  color: white;
-`;
-
-export const TimeIn = styled.span`
-font-size: 16px;
-line-height: 16px;
-`;
-
-export const DashedLine = styled.div`
-  border-top: 1px dashed #000;
+  height: auto;
   flex: 1;
-  margin-left: 8px;
-  margin-right: 8px;
-  opacity: 0.2;
+`;
+
+export const NameContainer = styled.div`
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  
+  :not(:last-child) {
+    border-bottom: 1px solid #000;
+  }
+
+  :first-child {
+    border-top: 1px solid #000;
+  }
+  `;
+
+export const Name = styled.div`
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: bold;
+`;
+
+export const JobContainer = styled.div`
+  height: 100%;
+  min-width: 30px;
+  display: flex;
+
+`;
+
+export const Job = styled.div`
+  height: 100%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-left: 1px solid #000;
+`;
+
+export const JobTitle = styled.span`
+  font-size: 12px;
+  line-height: 12px;
+  color: #000;
+  transform: rotate(-90deg);
 `;
