@@ -39,14 +39,9 @@ export const DesignationName = styled.span`
 export const StationPosition = styled.div`
   width: 100%;
   height: auto;
-  display: flex;
+  display: ${(props) => (props.stationExists ? "flex" : "none")};
   justify-content: flex-start;
   align-items: stretch;
-
-  :nth-child(odd) {
-    background: #666;
-    color: #fff;
-  }
 `;
 
 export const StationInfoContainer = styled.div`
@@ -79,7 +74,7 @@ export const NameContainer = styled.div`
   align-items: center;
   padding-left: 24px;
   color: #000;
-  
+
   :not(:last-child) {
     border-bottom: 1px solid #000;
   }
@@ -87,7 +82,7 @@ export const NameContainer = styled.div`
   :first-child {
     border-top: 1px solid #000;
   }
-  `;
+`;
 
 export const Name = styled.div`
   font-size: 18px;
@@ -95,14 +90,7 @@ export const Name = styled.div`
   font-weight: bold;
 `;
 
-export const JobContainer = styled.div`
-  height: 100%;
-  min-width: 30px;
-  display: flex;
-
-`;
-
-export const Job = styled.div`
+export const EmployeeInfoContainer = styled.div`
   height: 100%;
   width: 30px;
   display: flex;
@@ -112,9 +100,15 @@ export const Job = styled.div`
   border-left: 1px solid #000;
 `;
 
-export const JobTitle = styled.span`
+export const EmployeeInfo = styled.span`
   font-size: 12px;
   line-height: 12px;
   color: #000;
   transform: rotate(-90deg);
+`;
+
+export const JobContainer = styled.div`
+  height: 100%;
+  min-width: 30px;
+  display: flex;
 `;
