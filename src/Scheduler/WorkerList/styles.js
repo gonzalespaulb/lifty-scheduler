@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import cross from "./assets/cross.png";
 
+const CLOSED_HEIGHT = 75;
+const CONTENT_HEIGHT = 144;
+const OPEN_HEIGHT = `${CLOSED_HEIGHT + CONTENT_HEIGHT}px`;
+
+
 export const MainContainer = styled.div`
   width: 100%;
   display: flex;
@@ -12,9 +17,13 @@ export const MainContainer = styled.div`
 export const Worker = styled.div`
   width: 100%;
   max-height: ${(props) =>
-    props.openInfo && props.activeInfo === props.index ? "243px" : "75px"};
+    props.openInfo && props.activeInfo === props.index ? OPEN_HEIGHT : "75px"};
   overflow: hidden;
   transition: max-height 0.3s ease;
+
+  :nth-child(odd) {
+    background: #E6E6E6;
+  }
 
   :not(:last-child) {
     border-bottom: 1px solid #000;
@@ -63,16 +72,4 @@ export const Info = styled.span`
   font-size: 16px;
   line-height: 16px;
   margin-bottom: 16px;
-`;
-
-export const EmployeeStatusContainer = styled.div`
-  padding: 8px 16px;
-  border-radius: 20px;
-  margin-bottom: 16px;
-  background: green;
-`;
-
-export const EmployeeStatus = styled.span`
-  font-size: 12px;
-  color: white;
 `;
