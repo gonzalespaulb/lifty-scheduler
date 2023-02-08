@@ -198,14 +198,12 @@ export const liftList = [
   },
   {
     name: "LOWER PINES",
-    top: [],
     bottom: [whosWorking(75, attendant, "7:45")],
     supervisor: "Calvin Leinenbach",
     ridePassed: true,
   },
   {
     name: "UPPER PINES",
-    top: [],
     bottom: [whosWorking(76, attendant, "7:45")],
     supervisor: "Calvin Leinenbach",
     ridePassed: true,

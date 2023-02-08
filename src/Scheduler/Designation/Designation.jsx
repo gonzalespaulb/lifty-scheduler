@@ -31,7 +31,7 @@ const Designation = () => {
           </JobContainer>
         </NameContainer>
       );
-    });
+    }); 
   };
 
   const renderLifts = () => {
