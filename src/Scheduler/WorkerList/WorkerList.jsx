@@ -2,8 +2,6 @@ import { useState } from "react";
 import { liftList, nonLiftList } from "../utils/designationList";
 import {
   CrossIcon,
-  EmployeeStatus,
-  EmployeeStatusContainer,
   Info,
   InfoContainer,
   MainContainer,
@@ -18,18 +16,30 @@ const WorkerList = () => {
   for (const lift of liftList) {
 
     const designationPosition = (worker) => {
-      if (lift.top.includes(worker)) {
+      if (lift?.top?.includes(worker)) {
         return `Top ${lift.name}`;
       }
 
-      if (lift.mid && lift.mid.includes(worker)) {
+      if (lift?.mid?.includes(worker)) {
         return `Mid ${lift.name}`;
       }
 
-      if (lift.bottom.includes(worker)) {
+      if (lift?.bottom?.includes(worker)) {
         return `Bottom ${lift.name}`;
       }
     };
+
+    if (lift.top === undefined) {
+      const liftWorkerList = [lift.bottom].flat();
+
+      for (const worker of liftWorkerList) {
+        worker.supervisor = lift.supervisor;
+        worker.designation = designationPosition(worker);
+
+        allWorkers.push(worker);
+      }
+      continue;
+    }
 
     if (lift.mid === undefined) {
       const liftWorkerList = [lift.top, lift.bottom].flat();
@@ -89,9 +99,7 @@ const WorkerList = () => {
             />
           </WorkerContainer>
           <InfoContainer>
-            <EmployeeStatusContainer>
-              <EmployeeStatus>{worker.position}</EmployeeStatus>
-            </EmployeeStatusContainer>
+            <Info>Position: {worker.position}</Info>
             <Info>Supervisor: {worker.supervisor}</Info>
             <Info>Designation: {worker.designation}</Info>
             <Info>Shift Time: {worker.time}</Info>
