@@ -18,20 +18,30 @@ import { liftList, nonLiftList } from "../utils/designationList";
 const Designation = () => {
   const renderWorkers = (workerList) => {
     return workerList.map((worker, i) => {
+
+      const renderEmployeePositions = () => {
+        return worker.position.map((_, i) => {
+
+          return (
+            <EmployeeInfoContainer key={i}>
+              <EmployeeInfo>{worker.position[i]}</EmployeeInfo>
+            </EmployeeInfoContainer>
+          );
+        });
+      };
+
       return (
         <NameContainer key={i}>
           <Name>{worker.name}</Name>
           <JobContainer>
-            <EmployeeInfoContainer>
-              <EmployeeInfo>{worker.position}</EmployeeInfo>
-            </EmployeeInfoContainer>
+            {renderEmployeePositions()}
             <EmployeeInfoContainer>
               <EmployeeInfo>{worker.time}</EmployeeInfo>
             </EmployeeInfoContainer>
           </JobContainer>
         </NameContainer>
       );
-    }); 
+    });
   };
 
   const renderLifts = () => {
