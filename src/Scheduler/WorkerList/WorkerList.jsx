@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { liftList, nonLiftList } from "../utils/designationList";
+import { sortAlphabetically } from "../utils/helper";
 import {
   CrossIcon,
   Info,
@@ -72,6 +73,8 @@ const WorkerList = () => {
         setOpenInfo(true);
       }
     };
+
+    sortAlphabetically(allWorkers);
 
     return allWorkers.flatMap((worker, i) => {
       return (

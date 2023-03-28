@@ -63,6 +63,7 @@ export const liftList = [
     bottom: [
       whosWorking(12, [foreperson], "6:45"),
       whosWorking(13, [attendant], "6:45"),
+      whosWorking(81, [attendant], "7:45"),
     ],
     supervisor: "Calvin Leinenbach",
     ridePassed: true,
