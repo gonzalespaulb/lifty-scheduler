@@ -15,6 +15,7 @@ import {
 } from "./styles";
 import { liftList, nonLiftList } from "../utils/designationList";
 
+
 const Designation = () => {
   const renderWorkers = (workerList) => {
     return workerList.map((worker, i) => {
@@ -46,10 +47,11 @@ const Designation = () => {
 
   const renderLifts = () => {
     return liftList.map((lift, i) => {
+
       return (
         <DesignationCard key={i}>
           <DesignationNameContainer>
-            <DesignationName>{lift.name}</DesignationName>
+            <DesignationName>{lift.name.toUpperCase()}</DesignationName>
           </DesignationNameContainer>
 
           <StationPosition stationExists={lift.top}>
@@ -88,7 +90,7 @@ const Designation = () => {
       return (
         <DesignationCard key={i}>
           <DesignationNameContainer>
-            <DesignationName>{nonLift.name}</DesignationName>
+            <DesignationName>{nonLift.name.toUpperCase()}</DesignationName>
           </DesignationNameContainer>
           <EmployeeContainer>
             {nonLift.workers && renderWorkers(nonLift.workers)}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { liftList, nonLiftList } from "../utils/designationList";
-import { sortAlphabetically } from "../utils/helper";
+import { sortAlphabetically, upperCaseEveryOther } from "../utils/helper";
 import {
   CrossIcon,
   Info,
@@ -91,7 +91,7 @@ const WorkerList = () => {
           <InfoContainer>
             <Info>Position: {worker.position}</Info>
             <Info>Supervisor: {worker.supervisor}</Info>
-            <Info>Designation: {worker.designation}</Info>
+            <Info>Designation: {upperCaseEveryOther(worker.designation)}</Info>
             <Info>Shift Time: {worker.time}</Info>
             <Info></Info>
           </InfoContainer>
