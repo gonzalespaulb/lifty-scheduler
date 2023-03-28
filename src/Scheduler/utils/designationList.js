@@ -20,7 +20,7 @@ const whosWorking = (empId, position, time) => {
 
 export const liftList = [
   {
-    name: "#0 CIRQUE",
+    name: "#0 cirque",
     top: [whosWorking(0, [attendant, foreperson], "7:45")],
     bottom: [
       whosWorking(1, [foreperson], "7:45"),
@@ -31,14 +31,14 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "#1 SKYCAB",
+    name: "#1 skycab",
     top: [whosWorking(3, [attendant], "7:15")],
     bottom: [whosWorking(4, [attendant], "7:15")],
     supervisor: "Mel Boyer",
     ridePassed: true,
   },
   {
-    name: "#1 NIGHTCAB",
+    name: "#1 nightcab",
     top: [whosWorking(5, [operator], "11:00")],
     bottom: [
       whosWorking(6, [attendant], "11:00"),
@@ -48,7 +48,7 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "#3 SAM'S KNOB",
+    name: "#3 sam's knob",
     top: [whosWorking(8, [operator], "6:45")],
     bottom: [
       whosWorking(9, [foreperson], "6:45"),
@@ -58,7 +58,7 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "#4 BIG BURN",
+    name: "#4 big burn",
     top: [whosWorking(11, [operator], "6:45")],
     bottom: [
       whosWorking(12, [foreperson], "6:45"),
@@ -69,7 +69,7 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "#5 CAMPGROUND",
+    name: "#5 campground",
     top: [whosWorking(14, [operator], "7:15")],
     bottom: [
       whosWorking(15, [foreperson], "6:45"),
@@ -79,7 +79,7 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "#7 GONDOLA",
+    name: "#7 gondola",
     top: [
       whosWorking(20, [operator], "6:45"),
       whosWorking(22, [attendant], "6:45"),
@@ -98,7 +98,7 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "#8 ALPINE SPRINGS",
+    name: "#8 alpine springs",
     top: [whosWorking(28, [operator], "6:45")],
     bottom: [
       whosWorking(29, [foreperson], "6:45"),
@@ -108,7 +108,7 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "#9 SHEER BLISS",
+    name: "#9 sheer bliss",
     top: [whosWorking(41, [operator], "6:45")],
     bottom: [
       whosWorking(42, [foreperson], "6:45"),
@@ -118,7 +118,7 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "#10 ELK CAMP",
+    name: "#10 elk camp",
     top: [whosWorking(44, [operator], "6:45")],
     bottom: [
       whosWorking(45, [foreperson], "6:45"),
@@ -129,7 +129,7 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "#12 HIGH ALPINE",
+    name: "#12 high alpine",
     top: [whosWorking(48, [operator], "6:45")],
     bottom: [
       whosWorking(49, [foreperson], "6:45"),
@@ -139,7 +139,7 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "#14 MEADOWS",
+    name: "#14 meadows",
     top: [whosWorking(66, [attendant], "7:45")],
     bottom: [
       whosWorking(67, [operator], "7:45"),
@@ -152,7 +152,7 @@ export const liftList = [
   },
 
   {
-    name: "#16 TWO CREEKS",
+    name: "#16 two creeks",
     top: [whosWorking(51, [operator], "7:15")],
     bottom: [
       whosWorking(52, [foreperson], "7:15"),
@@ -162,7 +162,7 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "#18 VILLAGE EXPRESS",
+    name: "#18 village express",
     top: [whosWorking(54, [operator], "6:45")],
     mid: [
       whosWorking(55, [attendant], "7:45"),
@@ -179,7 +179,7 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "#19 CONEY GLADES",
+    name: "#19 coney glade",
     top: [whosWorking(63, [operator], "7:45")],
     bottom: [
       whosWorking(64, [foreperson], "7:45"),
@@ -189,7 +189,7 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "TUBE HILL",
+    name: "tube town",
     top: [whosWorking(72, [attendant], "7:45")],
     bottom: [
       whosWorking(73, [attendant], "7:45"),
@@ -199,13 +199,13 @@ export const liftList = [
     ridePassed: true,
   },
   {
-    name: "LOWER PINES",
+    name: "lower pines",
     bottom: [whosWorking(75, [attendant], "7:45")],
     supervisor: "Calvin Leinenbach",
     ridePassed: true,
   },
   {
-    name: "UPPER PINES",
+    name: "upper pines",
     bottom: [whosWorking(76, [attendant], "7:45")],
     supervisor: "Calvin Leinenbach",
     ridePassed: true,
@@ -214,7 +214,7 @@ export const liftList = [
 
 export const nonLiftList = [
   {
-    name: "EXTRAS",
+    name: "extras",
     workers: [
       whosWorking(77, [attendant], "6:45"),
       whosWorking(78, [attendant], "7:45"),
@@ -224,14 +224,14 @@ export const nonLiftList = [
     ],
   },
   {
-    name: "SUPERVISORS",
+    name: "supervisors",
     workers: [
       whosWorking(31, [supervisor], "7:15"),
       whosWorking(32, [supervisor], "7:15"),
     ],
   },
   {
-    name: "RELIEF",
+    name: "relief",
     workers: [
       whosWorking(33, [relief], "7:15"),
       whosWorking(34, [relief], "7:15"),
@@ -241,7 +241,7 @@ export const nonLiftList = [
     ],
   },
   {
-    name: "OFFICE",
+    name: "office",
     workers: [whosWorking(39,[admin], "6:30"), whosWorking(40, [admin], "6:30")],
   },
 ];
