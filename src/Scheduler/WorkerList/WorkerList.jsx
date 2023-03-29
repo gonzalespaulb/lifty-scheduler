@@ -89,7 +89,12 @@ const WorkerList = () => {
             />
           </WorkerContainer>
           <InfoContainer>
-            <Info>Position: {worker.position}</Info>
+            <Info>
+              Position: 
+              {worker.position[0]} 
+              {worker.position[1] ? " |" : ""}{" "}
+              {worker?.position[1]}
+            </Info>
             <Info>Supervisor: {worker.supervisor}</Info>
             <Info>Designation: {upperCaseEveryOther(worker.designation)}</Info>
             <Info>Shift Time: {worker.time}</Info>
