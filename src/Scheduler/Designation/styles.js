@@ -98,6 +98,7 @@ export const EmployeeInfoContainer = styled.div`
   align-items: center;
   overflow: hidden;
   border-left: 1px solid #000;
+  background: ${(props) => props.positionBg};
 `;
 
 export const EmployeeInfo = styled.span`

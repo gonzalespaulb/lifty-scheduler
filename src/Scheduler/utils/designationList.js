@@ -21,9 +21,9 @@ const whosWorking = (empId, position, time) => {
 export const liftList = [
   {
     name: "#0 cirque",
-    top: [whosWorking(0, [attendant, foreperson], "7:45")],
+    top: [whosWorking(0, [attendant], "7:45")],
     bottom: [
-      whosWorking(1, [foreperson], "7:45"),
+      whosWorking(1, [operator, foreperson], "7:45"),
       whosWorking(2, [attendant], "7:45"),
       whosWorking(78, [attendant], "7:45"),
     ],
@@ -32,7 +32,7 @@ export const liftList = [
   },
   {
     name: "#1 skycab",
-    top: [whosWorking(3, [attendant], "7:15")],
+    top: [whosWorking(3, [operator], "7:15")],
     bottom: [whosWorking(4, [attendant], "7:15")],
     supervisor: "Mel Boyer",
     ridePassed: true,
