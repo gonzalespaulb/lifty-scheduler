@@ -21,10 +21,23 @@ const Designation = () => {
     return workerList.map((worker, i) => {
 
       const renderEmployeePositions = () => {
+
+        const colorCode = (position) => {
+          if(position === "FOR") {
+            return "#C36C5E";
+          }
+
+          if(position === "OPR") {
+            return "#F0B93D"
+          }
+
+          else return "transparent"
+        }
+
         return worker.position.map((_, i) => {
 
           return (
-            <EmployeeInfoContainer key={i}>
+            <EmployeeInfoContainer positionBg={colorCode(worker.position[i])} key={i}>
               <EmployeeInfo>{worker.position[i]}</EmployeeInfo>
             </EmployeeInfoContainer>
           );
